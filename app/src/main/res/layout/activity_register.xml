@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/passReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="83dp"
+        android:ems="10"
+        android:hint="enter your password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPassReg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/confirmPassReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:hint="confirm your password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/passRegBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passReg" />
+
+    <Button
+        android:id="@+id/passRegBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="20dp"
+        android:text="Register"
+        app:layout_constraintBottom_toTopOf="@+id/regToLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassReg" />
+
+    <Button
+        android:id="@+id/regToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="95dp"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passRegBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
