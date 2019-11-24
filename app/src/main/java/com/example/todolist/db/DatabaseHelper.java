@@ -51,6 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public Boolean checkPasswordExist(){
+
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from login",
                 new String[]{});
