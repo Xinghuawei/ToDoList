@@ -120,8 +120,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Create PDF success",Toast.LENGTH_SHORT).show();
         }catch (DocumentException e){
             e.printStackTrace();
+            Toast.makeText(getApplicationContext(),"Please grand permission for this app",Toast.LENGTH_SHORT).show();
         }catch (FileNotFoundException e){
             e.printStackTrace();
+            Toast.makeText(getApplicationContext(),"Please grand permission for this app",Toast.LENGTH_SHORT).show();
         }
     }
 
