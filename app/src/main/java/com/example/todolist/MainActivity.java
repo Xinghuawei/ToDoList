@@ -9,6 +9,7 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Debug;
 import android.os.Environment;
 import android.speech.RecognizerIntent;
 import android.util.Log;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
     private String[] list = new String[MAX_LIST];
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         mTaskListView = findViewById(R.id.list_todo);
 
         updateUI();
+
+
+
     }
 
     @Override
@@ -191,5 +197,6 @@ public class MainActivity extends AppCompatActivity {
         db.delete(Task.TaskEntry.TABLE,Task.TaskEntry.COL_TASK_TITLE+" = ?",new String[]{task});
         db.close();
         updateUI();
+
     }
 }

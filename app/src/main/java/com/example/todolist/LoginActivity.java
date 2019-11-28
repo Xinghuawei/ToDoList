@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.logToList);
         toReg = findViewById(R.id.logToReg);
         db = new DatabaseHelper(this);
-
         if(checkExist()==true){
             toReg.setVisibility(View.GONE);
         }

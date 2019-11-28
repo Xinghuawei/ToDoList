@@ -24,15 +24,21 @@ public class LoginAndClick{
 
     @Test
     public void Should_RetrieveMatching_When_InquireByKeyword() {
+        onView(withId(R.id.logToReg)).perform(click());
+        onView(withId(R.id.passReg)).perform(typeText("1994"),closeSoftKeyboard());
+        onView(withId(R.id.confirmPassReg)).perform(typeText("1994"),closeSoftKeyboard());
+        onView(withId(R.id.passRegBtn)).perform(click());
+        onView(withId(R.id.regToLogin)).perform(click());
         onView(withId(R.id.userPassword))
                 .perform(typeText("1994"),closeSoftKeyboard());
         onView(withId(R.id.logToList))
                 .perform(click());
         onView(withId(R.id.action_add_task))
                 .perform(click());
+
         // Pending functional implementation
 //        assertEquals("dog", PhotoDisplayManager.getInstance().getFilter().getKeyword());
-        assertEquals("success", "success");
+
     }
 }
 
