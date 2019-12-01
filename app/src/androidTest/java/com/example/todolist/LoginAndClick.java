@@ -18,6 +18,8 @@ import static junit.framework.TestCase.assertEquals;
 @RunWith(AndroidJUnit4.class)
 public class LoginAndClick{
 
+
+    
     @Rule
     public ActivityTestRule<LoginActivity> rule
             = new ActivityTestRule<>(LoginActivity.class);
