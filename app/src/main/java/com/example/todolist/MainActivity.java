@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private void updateUI(){
+    public void updateUI(){
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = mHelper.getReadableDatabase();
         Cursor cursor = db.query(Task.TaskEntry.TABLE,
