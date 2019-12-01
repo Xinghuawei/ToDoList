@@ -43,11 +43,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //check username and password when login
     public Boolean checkPassword(String password){
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select * from login where password=?",
-                new String[]{password});
-        if(cursor.getCount()>0) return true;
-        else return false;
+
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("select * from login where password=?",
+                    new String[]{password});
+        try {
+            if (cursor.getCount() > 0) return true;
+            else return false;
+        }finally {
+            cursor.close();
+        }
     }
 
     public Boolean checkPasswordExist(){
@@ -55,7 +60,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from login",
                 new String[]{});
-        if(cursor.getCount()>0) return true;
-        else return false;
+        try {
+            if (cursor.getCount() > 0) return true;
+            else return false;
+        }finally {
+            cursor.close();
+        }
     }
+
 }

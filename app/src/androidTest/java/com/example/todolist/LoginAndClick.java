@@ -38,8 +38,6 @@ public class LoginAndClick{
         onView(withId(R.id.action_add_task))
                 .perform(click());
 
-        // Pending functional implementation
-//        assertEquals("dog", PhotoDisplayManager.getInstance().getFilter().getKeyword());
 
     }
 }

@@ -12,6 +12,10 @@ import android.widget.Toast;
 
 import com.example.todolist.db.DatabaseHelper;
 
+//interface ReturnResult{
+//    public void re();
+//        }
+
 public class RegisterActivity extends AppCompatActivity {
     EditText passFirst, passSecnond;
     Button confirmPass,regToLog;
@@ -41,7 +45,11 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     if (!firstP.equals(secondP)) {
                         Toast.makeText(getApplicationContext(), "Password not matching", Toast.LENGTH_SHORT).show();
-                    }else{
+                    }
+                    else if(firstP.length()>16) {
+                        Toast.makeText(getApplicationContext(), "Password should not be longer than 16 characters", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
                         Boolean insert = db.insert(firstP);
                         if(insert==true){
                             Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
@@ -56,6 +64,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void regToLogin(){
         Intent i = new Intent(this,LoginActivity.class);
+//        ReturnResult r=()->{
+//            Toast.makeText(getApplicationContext(), "Back to Login page", Toast.LENGTH_SHORT).show();
+//        }
         startActivity(i);
     }
+
+
+
+
 }
