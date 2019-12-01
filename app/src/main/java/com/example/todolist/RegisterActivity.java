@@ -62,6 +62,8 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+
+
     private void regToLogin(){
         Intent i = new Intent(this,LoginActivity.class);
 //        ReturnResult r=()->{
